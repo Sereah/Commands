@@ -23,6 +23,39 @@ Commands learned during work.
 
 
 
+###### 拉取Android源码
+
+> repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r33 --repo-url clone.bundle
+
+
+
+###### 拉取AOSP Car-libs源码
+
+> repo init -u https://android.googlesource.com/platform/manifest -b ub-automotive-master-20231102 --repo-url clone.bundle
+
+
+
+###### 导入framework.jar编译
+
+> 设置bootstrapClasspath
+> 例如：
+
+```yaml
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile).tap {
+        configureEach {
+            List<File> newFileList = new ArrayList<>()
+            newFileList.add(rootProject.file(branch_path + '/ext/framework-bluetooth.jar'))
+            newFileList.add(rootProject.file(branch_path + '/ext/framework-wifi.jar'))
+            newFileList.addAll(options.bootstrapClasspath.getFiles())
+            options.bootstrapClasspath = files(newFileList.toArray())
+        }
+    }
+}
+```
+
+
+
 
 
 #### Carplay开发命令
