@@ -62,6 +62,14 @@ gradle.projectsEvaluated {
 
 
 
+###### AOSP切换分支
+
+> cd .repo/manifests
+>
+> git branch -a | cut -d / -f 3
+>
+> 查看manifest里存在哪些分支，通过repo init重新初始化然后sync
+
 
 
 #### Carplay开发命令
