@@ -23,6 +23,12 @@ Commands learned during work.
 
 
 
+###### adb查看包里包含指定action的activity
+
+> dumpsys package com.zone.hmi.settings | grep -A 10 "android.intent.action.MAIN"
+
+
+
 ###### 拉取Android源码
 
 > repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r33 --repo-url clone.bundle
@@ -85,3 +91,16 @@ gradle.projectsEvaluated {
 ###### ubuntu下更改DNS域名
 
 > /etc/resolv.conf
+
+
+
+###### 确认系统架构
+
+> uname -m
+
+
+
+###### 确认可执行文件的的架构，比如
+
+> file /system/bin/ip
+> file /system/lib/libiprouteutil.so
