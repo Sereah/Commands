@@ -62,6 +62,12 @@ gradle.projectsEvaluated {
 
 
 
+###### 查看activity启动时间
+
+> adb shell am start -W <Activity>
+
+
+
 ###### AOSP切换分支
 
 > cd .repo/manifests
