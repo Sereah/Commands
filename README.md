@@ -78,6 +78,26 @@ gradle.projectsEvaluated {
 
 
 
+###### Android黑白夜切换
+
+> cmd uimode night yes
+
+
+
+###### 系统属性设置/查看
+
+> getprop/setprop sys.carplay.route
+
+
+
+###### 手动加载驱动
+
+> insmod usbmfi.ko
+
+
+
+
+
 #### Carplay开发命令
 
 ###### 查看mfi usb驱动状态
