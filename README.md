@@ -41,6 +41,16 @@ Commands learned during work.
 
 
 
+###### Windows拉取AOSP源码
+
+> 1.git clone https://android.googlesource.com/platform/manifest.git 或者 git clone https://aosp.tuna.tsinghua.edu.cn/platform/manifest.git
+>
+> 2.去manifest里切换想要拉取代码的分支。
+>
+> 3.修改python文件并执行
+
+
+
 ###### 导入framework.jar编译
 
 > 设置bootstrapClasspath
